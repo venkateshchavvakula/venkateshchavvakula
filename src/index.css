@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blog-card-img img {
+    transition-duration: .25s;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
