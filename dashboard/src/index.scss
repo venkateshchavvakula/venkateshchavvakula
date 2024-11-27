@@ -1,0 +1,754 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Nunito Regular';
+    src: url('./assets/fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Medium';
+    src: url('./assets/fonts/Nunito-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Bold';
+    src: url('./assets/fonts/Nunito-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito SemiBold';
+    src: url('./assets/fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Black';
+    src: url('./assets/fonts/Nunito-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Light';
+    src: url('./assets/fonts/Nunito-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    @apply font-nunitoRegular;
+}
+
+.menu {
+    >a {
+        &:hover {
+            background-color: #2b344f;
+            color: #bbbdc5;
+        }
+    }
+
+    svg.icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+}
+
+.menu a {
+    color: #bbbdc5;
+}
+
+
+.loader {
+    @apply bg-CalmWaters flex fixed inset-0 z-50 items-center justify-center text-SpaceCadet bg-opacity-50;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.layout-menu {
+    background: #f1f4f8;
+    color: #141c4c;
+    z-index: 999;
+}
+
+.gradiant-aside {
+    background: linear-gradient(179.88deg, #d7f3ff 0.11%, #3fb0e1 107.45%), #ffffff;
+}
+
+.active-link {
+    @apply cursor-pointer text-SpaceCadet;
+
+    >a {
+        background-color: #4E98FF;
+        color: #fff;
+    }
+
+    >a:hover {
+        background-color: #4E98FF;
+        color: #fff;
+    }
+}
+
+.submenu {
+    li {
+        cursor: pointer;
+        padding: 9px 19px;
+        margin-bottom: 5px;
+        position: relative;
+
+        &:hover {
+            background-color: #2b344f;
+            color: #bbbdc5;
+        }
+
+    }
+}
+
+.custom-date-picker {
+    .MuiInputBase-formControl {
+        border-radius: 10px !important;
+        color: #141c4c !important;
+    }
+
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-radius: 10px !important;
+    }
+
+    .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+        border-radius: 10px !important;
+    }
+
+    .MuiOutlinedInput-notchedOutline:hover {
+        border-radius: 10px !important;
+    }
+
+    .error-state {
+        .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: #ef4949 !important;
+            border-radius: 10px !important;
+        }
+
+        .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+            color: #ef4949 !important;
+            background-color: #404050;
+        }
+
+        .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+            border-color: #ef4949 !important;
+            border-radius: 10px !important;
+        }
+    }
+}
+
+.date-range-picker {
+    .custom-label {
+        color: #6a6a78;
+        position: relative;
+        top: 12px;
+    }
+
+    .toggle-label {
+        transform: translateY(-15px);
+        font-size: 10px;
+    }
+}
+
+.react-datepicker-wrapper input {
+    border: none !important;
+    color: #141c4c;
+    background-color: transparent;
+    outline: none;
+}
+
+.filters {
+    .MuiOutlinedInput-root {
+        height: 48px !important;
+    }
+
+    .date-range-picker {
+        height: 48px !important;
+    }
+}
+
+.date_range_filter {
+    .custom-select-input {
+        width: 200px;
+    }
+
+    .MuiOutlinedInput-root {
+        height: 48px !important;
+    }
+
+    .date-range-picker {
+        height: 48px !important;
+    }
+}
+
+.file-upload-box {
+    @apply p-3;
+    border-radius: 8px;
+    display: block;
+    justify-items: center;
+    align-items: center;
+    border: 1px dashed #e7e8ed;
+}
+
+.file-upload-active {
+    border: 1px dashed #0c8ec7;
+}
+
+.file-upload-error {
+    border: 1px dashed #ef4949;
+}
+
+.cancel-btn {
+    border-radius: 8px;
+    border: 1px solid #ef4949;
+    font-size: 12px;
+    color: #ef4949;
+    padding: 8px 22px;
+}
+
+.upload-btn {
+    border-radius: 8px;
+    @apply border border-SpaceCadet text-sm text-SpaceCadet;
+    padding: 8px 22px;
+}
+
+.divstyles {
+    @apply border-DreamyCloud border rounded-lg p-3 sm:p-6;
+}
+
+.subdiv {
+    @apply items-center gap-y-4 sm:gap-y-6 rounded-lg p-[17px] sm:p-6 font-nunitoRegular;
+}
+
+.subheading {
+    @apply text-base sm:text-lg sm:py-2 font-bold text-SpaceCadet;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.seconday-heading {
+    @apply text-WaterBlue text-base font-semibold;
+}
+
+.form-control {
+    height: 40px;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.input-group-addon {
+    background-color: #FAFAFA;
+    color: #4A4A4A;
+    border-radius: 2px;
+    height: 40px;
+    padding-top: 6px;
+    width: 100px;
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.form-control:first-child,
+.input-group-addon:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.disabled-input {
+    background-color: #FAFAFA;
+    color: #4A4A4A;
+}
+
+.emp-basic-detail {
+    padding-top: 10px;
+    display: flex;
+
+    .vertical-align-bottom {
+        vertical-align: middle !important;
+    }
+
+    .icon-xxlg {
+        height: 25px;
+        width: 25px;
+        padding-right: 10px;
+        vertical-align: middle !important;
+    }
+}
+
+.personal-info,
+.payment-info,
+.salary-info {
+    border: 1px solid #EEEEF0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05);
+    border-radius: 6px;
+    padding: 24px;
+    background-color: #fff;
+
+    .emp-detail-row {
+        @apply flex flex-row pb-2 gap-4;
+    }
+
+    .emp-detail-name {
+        color: #666;
+        padding-right: 0;
+        overflow: hidden;
+        width: 210px;
+    }
+
+    .title {
+        color: #666;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .text-field-label {
+        color: #666 !important;
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+
+    .zp-table.table thead:first-child>tr:first-child>th {
+        border-top: 1px solid rgba(239, 236, 236, .42);
+        border-bottom: 1px solid rgba(239, 236, 236, .42);
+    }
+
+    .zp-table thead>tr>th {
+        font-weight: 400;
+        color: #555;
+        font-size: 12px;
+        height: 40px;
+        text-transform: uppercase;
+    }
+}
+
+.cards-section {
+    .panel-body {
+        padding: 15px 25px;
+        border-left: 2px solid;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+
+    .panel-body.ready {
+        border-color: #3c90ff;
+    }
+
+    .details span {
+        font-size: 11px;
+        font-style: normal;
+        text-transform: uppercase;
+        color: #666;
+        letter-spacing: .3px;
+    }
+}
+
+.payrun-summary-container {
+    font-size: 14px !important;
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0px;
+
+    .net-pay-section {
+        background-color: #FFF;
+        border-radius: 6px;
+        color: #2F3448;
+        width: 411px;
+        height: 160px;
+        padding: 20px;
+        margin-right: 20px;
+        border: 1px solid #E7E8EF;
+       
+    }
+
+    .pay-day-section {
+        width: 152px;
+        height: 160px;
+        border-radius: 6px;
+        background: #fff;
+        text-align: center;
+        border: 1px solid #E7E8EF;
+        padding: 15px;
+        color: #1E223D;
+    }
+    .deductions-section {
+        h4 {
+            padding: 0 20px;
+            font-size: 18px;
+            color: #6b6c75;
+        }
+        table tbody tr td {
+            padding: 7px 20px;
+        }
+        .payrun-label {
+            color: #626474;
+            opacity: 1;
+            }
+    }
+    .payrun-label {
+        color: #2F3448;
+        opacity: .5;
+        font-size: 13px;
+    }
+    .font-small{
+        font-size: 13px;
+
+    }
+}
+
+.dialog-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.pay-run-sec {
+    animation: slider .5s linear 1;
+    top: 48px;
+    transition: right .5s linear;
+    position: absolute;
+    width: 480px;
+    bottom: 0;
+    right: -480px;
+    background: #fff;
+    height: 95vh;
+}
+
+.pay-run-sec-show {
+    z-index: 2;
+    right: 0;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .18);
+
+   
+}
+
+.liquid-container {
+    z-index: 9999;
+    overflow: visible;
+    height: 100%;
+}
+.pay-run_preview {
+
+    .split-up-view-footer {
+        clear: both;
+        margin: auto -15px;
+        height: 50px;
+        background: #fafafa;
+    }
+
+    .liquid-container {
+        position: relative;
+        transform: translateY(0);
+        height: 100%;
+
+    }
+
+    svg.icon {
+        height: 18px;
+        width: 18px;
+    }
+
+    .liquid-child {
+        overflow: visible;
+        height: 100%;
+    }
+
+    .ind-split-up-view-header {
+        padding: 18px 45px 18px 34px;
+        height: 90px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 6px;
+        right: 9px;
+        font-size: 22px;
+        color: inherit;
+    }
+
+    .split-view-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .emp-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 65%;
+        font-size: 18px;
+        margin: 2px 0;
+    }
+
+    .sub-section {
+        font-size: 14px;
+        letter-spacing: .2px;
+    }
+
+    .split-up-view-header {
+        background: #F9FAFF;
+        padding: 30px 30px 20px;
+    }
+
+    .split-view-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .net-pay {
+        font-size: 22px;
+    }
+
+    .download-payslip-footer-margin {
+        margin-bottom: 70px;
+    }
+
+    .split-view-content {
+        position: absolute;
+        padding: 15px;
+        top: 113px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .scrollbox {
+        background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), 0 100%, radial-gradient(farthest-corner at 50% 0, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)), 0 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0);
+        background-size: 100% 40px, 100% 40px, 100% 4px, 100% 4px;
+        background-attachment: local, local, scroll, scroll;
+    }
+
+    .scroll-y {
+        overflow-y: auto;
+    }
+
+    .scroll-x {
+        overflow-x: auto;
+    }
+
+    .ind-split-view-content {
+        top: 90px;
+    }
+
+    .table.split-up-table {
+        margin-right: -15px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        min-height: .01%;
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .download-payslip-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+        padding: 15px 30px;
+    }
+
+    .table.split-up-table thead>tr>th.action-column {
+        padding: 0;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 8px 12px;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius: 4px;
+    }
+
+    .btn-submit {
+        background-color: #4E98FF;
+        color: #fff;
+        border-color: #4E98FF;
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+
+    .table.split-up-table {
+        margin-right: -15px;
+    }
+
+    .table.split-up-table tbody tr:first-child>td {
+        padding-top: 20px;
+    }
+
+    .table.split-up-table thead>tr>th.deductions {
+        color: #ff4c4c;
+    }
+
+    .table.split-up-table tbody tr>td {
+        border: none;
+        padding: 10px 15px;
+        vertical-align: middle;
+    }
+
+    .table.split-up-table tbody tr>td.actual-paid-days-row {
+        border-top: 1px dashed #ddd;
+    }
+
+    svg.icon.icon-xs {
+        height: 12px;
+        width: 12px;
+    }
+
+    .table.split-up-table tbody tr>td.action-column {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .table.split-up-table thead>tr>th.earnings {
+        color: #00b050;
+    }
+
+    .table.split-up-table thead>tr>th {
+        text-transform: uppercase;
+        color: #444;
+        border: none;
+        padding: 10px 15px;
+        font-size: 13px;
+        border-bottom: 1px solid #ededed;
+        border-top: 1px solid #ededed !important;
+    }
+}
+
+.btn-payment{
+    text-transform: uppercase;
+    padding: 8px 12px;
+    background-color: #4E98FF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    max-width: 90px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.cancel-btn {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.confirm-btn {
+    text-decoration: none;
+    background-color: #4E98FF;
+    color: #fff;
+}
+
+.pay-info-column .pay-info-item {
+    padding-left: 15px;
+    border-left: 4px solid;
+}
+
+.donut-chart .pay-info-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.pay-info-column .pay-info-item.netpay {
+    border-color: #47D9A0;
+}
+
+.pay-info-column .pay-info-item.deductions {
+    border-color: #FF6979;
+}
+
+.pay-info-column .pay-info-item.grosspay {
+    border-color: #C9CEDE;
+}
+
+.total_sales{
+    .tremor-base{
+        width: 60% !important;
+    }
+}
+
+.download-btn{
+    color: #4E98FF;
+}
+
+.pay-info-column .pay-info-item.ptsummary {
+    border-color: #4E98FF;
+}
+.pay-info-column .pay-info-item.tdssummary {
+    border-color: #fac50b;
+}

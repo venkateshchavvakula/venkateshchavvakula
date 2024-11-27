@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Nunito Regular';
+  src: url("./assets/fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Medium';
+  src: url("./assets/fonts/Nunito-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Bold';
+  src: url("./assets/fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito SemiBold';
+  src: url("./assets/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Black';
+  src: url("./assets/fonts/Nunito-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito Light';
+  src: url("./assets/fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  @apply font-nunitoRegular;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #636363;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f4f8;
+}
+
+.menu > a:hover {
+  background: rgba(210, 147, 147, 0.05);
+  border-radius: 8px;
+}
+
+.menu a {
+  color: #141c4c;
+}
+
+.is-sub-menu > a {
+  position: relative;
+}
+
+.is-sub-menu > a::after {
+  content: '';
+  background-image: '';
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.submenu li.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), #333748;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #333748;
+}
+
+.submenu li {
+  padding: 8px 13px;
+  margin-left: 2.5rem;
+  margin-right: 14px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.submenu li:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), #333748;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #333748;
+}
+
+.submenu li::after {
+  width: 1px;
+  height: 113%;
+  content: '';
+  display: block;
+  background: #fff;
+  margin: 0;
+  position: absolute;
+  left: -14px;
+  bottom: 0;
+  top: -1px;
+}
+
+.custom-date-picker .MuiInputBase-formControl {
+  border-radius: 10px !important;
+  color: #141c4c !important;
+}
+
+.custom-date-picker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-radius: 10px !important;
+}
+
+.custom-date-picker .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-radius: 10px !important;
+}
+
+.custom-date-picker .MuiOutlinedInput-notchedOutline:hover {
+  border-radius: 10px !important;
+}
+
+.custom-date-picker .error-state .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ef4949 !important;
+  border-radius: 10px !important;
+}
+
+.custom-date-picker .error-state .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+  color: #ef4949 !important;
+  background-color: #404050;
+}
+
+.custom-date-picker .error-state .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #ef4949 !important;
+  border-radius: 10px !important;
+}
+
+.date-range-picker .custom-label {
+  color: #6a6a78;
+  position: relative;
+  top: 12px;
+}
+
+.date-range-picker .toggle-label {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  font-size: 10px;
+}
+
+.react-datepicker-wrapper input {
+  border: none !important;
+  color: #141c4c;
+  background-color: transparent;
+  outline: none;
+}
+
+.filters .MuiOutlinedInput-root {
+  height: 48px !important;
+}
+
+.filters .date-range-picker {
+  height: 48px !important;
+}
+
+.date_range_filter .custom-select-input {
+  width: 200px;
+}
+
+.date_range_filter .MuiOutlinedInput-root {
+  height: 48px !important;
+}
+
+.date_range_filter .date-range-picker {
+  height: 48px !important;
+}
+
+.file-upload-box {
+  @apply p-3;
+  border-radius: 8px;
+  display: block;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px dashed #e7e8ed;
+}
+
+.file-upload-active {
+  border: 1px dashed #0c8ec7;
+}
+
+.file-upload-error {
+  border: 1px dashed #ef4949;
+}
+
+.cancel-btn {
+  border-radius: 8px;
+  border: 1px solid #ef4949;
+  font-size: 12px;
+  color: #ef4949;
+  padding: 8px 22px;
+}
+
+.upload-btn {
+  border-radius: 8px;
+  @apply border border-SpaceCadet text-sm text-SpaceCadet;
+  padding: 8px 22px;
+}
+
+.divstyles {
+  @apply border-DreamyCloud border rounded-lg p-3 sm:p-6;
+}
+
+.subdiv {
+  @apply bg-white items-center gap-y-4 sm:gap-y-6 rounded-lg p-[17px] sm:p-6 font-nunitoRegular;
+}
+
+.subheading {
+  @apply text-base sm:text-lg  sm:py-2 font-bold text-SpaceCadet;
+}
+/*# sourceMappingURL=index.css.map */
